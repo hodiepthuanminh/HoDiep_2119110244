@@ -8,6 +8,9 @@ namespace Cau1.DTO
 {
     public class AccountDTO
     {
-        
+        public string username { get; set; }
+        public string password { get; set; }
+        public string displayname { get; set; }
+        public string type { get; set; }
     }
 }

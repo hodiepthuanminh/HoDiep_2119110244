@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BLL\AccountBLL.cs" />
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\DBConnection.cs" />
     <Compile Include="DTO\AccountDTO.cs" />
     <Compile Include="GUI\AccountGUI.cs">
       <SubType>Form</SubType>

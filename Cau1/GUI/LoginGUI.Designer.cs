@@ -60,6 +60,7 @@ namespace Cau1.GUI
             this.txt_UserName.Name = "txt_UserName";
             this.txt_UserName.Size = new System.Drawing.Size(181, 22);
             this.txt_UserName.TabIndex = 1;
+            this.txt_UserName.Text = "bichhue";
             // 
             // txt_PassWord
             // 
@@ -67,6 +68,7 @@ namespace Cau1.GUI
             this.txt_PassWord.Name = "txt_PassWord";
             this.txt_PassWord.Size = new System.Drawing.Size(181, 22);
             this.txt_PassWord.TabIndex = 1;
+            this.txt_PassWord.Text = "123456";
             // 
             // btn_Login
             // 

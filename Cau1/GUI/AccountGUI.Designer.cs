@@ -34,6 +34,7 @@ namespace Cau1.GUI
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_Exit = new System.Windows.Forms.Button();
             this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
@@ -44,9 +45,8 @@ namespace Cau1.GUI
             this.txt_Username = new System.Windows.Forms.TextBox();
             this.txt_Password = new System.Windows.Forms.TextBox();
             this.txt_DisplayName = new System.Windows.Forms.TextBox();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_Type = new System.Windows.Forms.TextBox();
+            this.cb_Type = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,6 +92,10 @@ namespace Cau1.GUI
             this.columnHeader3.Text = "Mật khẩu";
             this.columnHeader3.Width = 129;
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Chức vụ";
+            // 
             // btn_Exit
             // 
             this.btn_Exit.Location = new System.Drawing.Point(462, 441);
@@ -100,6 +104,7 @@ namespace Cau1.GUI
             this.btn_Exit.TabIndex = 1;
             this.btn_Exit.Text = "Thoát";
             this.btn_Exit.UseVisualStyleBackColor = true;
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // btn_Edit
             // 
@@ -109,6 +114,7 @@ namespace Cau1.GUI
             this.btn_Edit.TabIndex = 1;
             this.btn_Edit.Text = "Sửa";
             this.btn_Edit.UseVisualStyleBackColor = true;
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // btn_Delete
             // 
@@ -118,6 +124,7 @@ namespace Cau1.GUI
             this.btn_Delete.TabIndex = 1;
             this.btn_Delete.Text = "Xóa";
             this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Add
             // 
@@ -177,10 +184,6 @@ namespace Cau1.GUI
             this.txt_DisplayName.Size = new System.Drawing.Size(170, 22);
             this.txt_DisplayName.TabIndex = 3;
             // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Chức vụ";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -190,19 +193,23 @@ namespace Cau1.GUI
             this.label4.TabIndex = 2;
             this.label4.Text = "Chức vụ :";
             // 
-            // txt_Type
+            // cb_Type
             // 
-            this.txt_Type.Location = new System.Drawing.Point(690, 195);
-            this.txt_Type.Name = "txt_Type";
-            this.txt_Type.Size = new System.Drawing.Size(170, 22);
-            this.txt_Type.TabIndex = 3;
+            this.cb_Type.FormattingEnabled = true;
+            this.cb_Type.Items.AddRange(new object[] {
+            "Admin",
+            "NV"});
+            this.cb_Type.Location = new System.Drawing.Point(690, 200);
+            this.cb_Type.Name = "cb_Type";
+            this.cb_Type.Size = new System.Drawing.Size(121, 24);
+            this.cb_Type.TabIndex = 4;
             // 
             // AccountGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 530);
-            this.Controls.Add(this.txt_Type);
+            this.Controls.Add(this.cb_Type);
             this.Controls.Add(this.txt_DisplayName);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.txt_Username);
@@ -243,6 +250,6 @@ namespace Cau1.GUI
         private System.Windows.Forms.TextBox txt_DisplayName;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_Type;
+        private System.Windows.Forms.ComboBox cb_Type;
     }
 }

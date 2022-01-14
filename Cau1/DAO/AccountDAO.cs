@@ -42,5 +42,27 @@ namespace Cau1.DAO
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+        public void Delete_Account(AccountDTO ac)
+        {
+            SqlConnection conn = CreateConnection();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("exec Delete_Account @username", conn);
+            cmd.Parameters.Add(new SqlParameter("@username", ac.username));
+           
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        public void Edit_Account(AccountDTO ac)
+        {
+            SqlConnection conn = CreateConnection();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("exec Edit_Account @username, @displayname, @password, @type", conn);
+            cmd.Parameters.Add(new SqlParameter("@username", ac.username));
+            cmd.Parameters.Add(new SqlParameter("@displayname", ac.displayname));
+            cmd.Parameters.Add(new SqlParameter("@password", ac.password));
+            cmd.Parameters.Add(new SqlParameter("@type", ac.type));
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }

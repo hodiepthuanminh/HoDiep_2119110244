@@ -20,5 +20,13 @@ namespace Cau1.BLL
         {
             dao.Add_Account(ac);
         }
+        public void Delete_Account(AccountDTO ac)
+        {
+            dao.Delete_Account(ac);
+        }
+        public void Edit_Account(AccountDTO ac)
+        {
+            dao.Edit_Account(ac);
+        }
     }
 }

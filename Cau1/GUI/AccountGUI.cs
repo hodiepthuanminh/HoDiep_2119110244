@@ -111,7 +111,7 @@ namespace Cau1.GUI
             if (f == DialogResult.Yes)
             {
                 this.Close();
-                Application.Exit();
+                
             }
         }
     }

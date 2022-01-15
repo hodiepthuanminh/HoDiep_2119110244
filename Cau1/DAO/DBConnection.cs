@@ -16,5 +16,7 @@ namespace Cau1.DAO
             conn.ConnectionString = @"Data Source=DESKTOP-1H5HC0P\SQLEXPRESS;Initial Catalog=QuanLy;User ID=sa; Password=diep123456789@";
             return conn;
         }
+
+        
     }
 }

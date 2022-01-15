@@ -28,5 +28,18 @@ namespace Cau1.BLL
         {
             dao.Edit_Account(ac);
         }
+        public string Login(AccountDTO ac)
+        {
+            if (ac.username == "")
+            {
+                return "no_username";
+            }
+            if (ac.password == "")
+            {
+                return "no_password";
+            }
+            string info = dao.Login(ac);
+            return info;
+        }
     }
 }

@@ -64,5 +64,30 @@ namespace Cau1.DAO
             cmd.ExecuteNonQuery();
             conn.Close();
         }
+       public string Login(AccountDTO ac)
+        {
+            string user = null;
+            SqlConnection conn = CreateConnection();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("exec sp_Login @username, @password", conn);
+            cmd.Parameters.Add(new SqlParameter("@username", ac.username));
+            cmd.Parameters.Add(new SqlParameter("@password", ac.password));
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    user = reader.GetString(0);
+
+                }
+                reader.Close();
+                conn.Close();
+            }
+            else
+            {
+                return "Sai thông tin đăng nhập!";
+            }
+            return user;
+        }
     }
 }
